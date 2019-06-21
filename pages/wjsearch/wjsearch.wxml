@@ -1,0 +1,49 @@
+<!--wjsearch.wxml-->
+<view class="wj-container">
+  <checkbox-group bindchange='checkboxChange'>
+    <checkbox value='mgtype' checked='1'>敏感词</checkbox>
+    <checkbox value='ty_wj_type' checked='1'>通用违禁词</checkbox>
+    <checkbox value='mz_wj_type' checked='1'>美妆违禁词</checkbox>
+    <checkbox value='xw_wj_type' checked='1'>新闻违禁词</checkbox>
+  </checkbox-group>
+
+  <textarea class="wj-input" placeholder='输入查询信息' bindinput='bindwjInput' maxlength='100' value='{{wjtext_value}}'></textarea>
+  <view class='text-count'>
+    <text class='text-count'>{{textcount}}/100</text>
+  </view>
+  <view class='input-button'>
+    <button  bindtap='wjClear' class="wj-clear">清空</button>
+    <button type='primary' bindtap='wjSearch' class='wj-search'>查一查</button>
+  </view>
+  <!-- 结果 -->
+  <view class="wj-result" wx:if="{{wjresult}}">
+    <textarea class="result-text">
+      <rich-text nodes="{{wjresult.content}}"></rich-text>
+    </textarea> 
+    <view class='mg'>
+      <text>总字数：{{wjresult.count}}</text>
+      <text style='float:right'>敏感词数量：{{wjresult.sensitive_count}}</text>
+    </view>  
+    <view class='wj'> 
+      <text>违禁词数量：{{wjresult.forbid_count}}</text>
+      <button type='primary' bindtap='btnclick'>查看(隐藏)</button>
+    </view>
+  </view> 
+  <view class="table table-result" hidden='{{onOff}}'>
+    <view class="tr bg-w">
+      <view class="th">编号</view>
+      <view class="th">关键字</view>
+      <view class="th ">类别</view>
+      <view class='th'>备注</view>
+    </view>
+      <view wx:for="{{wjresult.info}}" class="tr bg-g">
+        <view class="td">{{index+1}}</view>
+        <view class="td" style='color:red;'>{{item.title}}</view>
+        <view class="td">{{item.weijin_type}}</view>
+        <view class="td">{{item.content}}</view>
+    </view>  
+  </view>
+  
+  
+  
+</view>

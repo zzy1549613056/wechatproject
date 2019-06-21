@@ -1,0 +1,119 @@
+/* pages/wjsearch/wjsearch.wxss */
+.wj-container{
+  padding: 10px 10px;
+}
+
+
+.wj-input{
+  border: solid 1px #ddd ;
+  height: 280rpx;
+  width: 98%;
+  margin-top: 10rpx;
+  margin-bottom: -15rpx;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  border-radius: 4px;
+}
+
+view.input-button{
+  overflow: hidden;
+}
+
+button.wj-clear{
+  float: left;
+  width: 30%;
+}
+
+button.wj-search{
+  float: right;
+  width: 30%;
+}
+
+view.wj-result{
+  margin-top: 30rpx;
+}
+
+view.text-count{
+  text-align: right;
+  margin-bottom: 10rpx;
+}
+text.text-count{
+  font-size: 10px;
+  color:rgb(207, 214, 219);
+  text-align: right;
+}
+
+view.wj{
+  overflow: hidden;
+}
+
+.wj text{
+  float: left
+}
+
+.wj button{
+  float: left;
+  font-size: 10px;
+  padding:0 5px;
+  background-color: lightskyblue;
+  margin-left: 100rpx;
+}
+
+.result-text{
+  border: solid 1px #ddd ;
+  height: 280rpx;
+  width: 98%;
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+
+
+
+
+
+/* 表格 */
+.table {
+  margin-top: 20rpx;
+  border: 0px solid darkgray;
+  font-size: 25rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.td {
+    border: 0.3px solid white;
+    width:40%;
+    height:50rpx;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+  height:50rpx;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+}
+
+.th:first-child{
+  width: 10%
+}
+
+.td:first-child{
+  width: 10%
+}
