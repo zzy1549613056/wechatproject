@@ -25,7 +25,7 @@ Page({
     console.log(this.data.mgtype,this.data.ty_wj_type,this.data.mz_wj_type,this.data.xw_wj_type);
     wx.request({
       method: 'post',
-      url: 'http://222.95.16.22:5000/wjsearch',
+      url: 'http://121.40.138.185:5001/wjsearch',
       data: {
         'text': this.data.wjtext,
         'mgtype': this.data.mgtype,

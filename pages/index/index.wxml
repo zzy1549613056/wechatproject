@@ -9,5 +9,6 @@
   </view>
   <view class="usermotto">
     <button type='primary' bindtap='bindSearchTap'>点击使用违禁词查询</button>
+    <button type='primary' bindtap='bindAddTap'>点击调用云函数</button>
   </view>
 </view>
